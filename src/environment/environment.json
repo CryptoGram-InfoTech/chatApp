@@ -1,7 +1,7 @@
 
 {
     "development": {
-        "PORT": 8080,
+        "PORT": 3000,
         "MONGODB_URI": "mongodb+srv://parikshit:Imdbest1@cluster0.2e0pv1v.mongodb.net/",
         "dummymongovalue":"mongodb://atlas-sql-6491e42ee58eb0595cf42449-h4lfj.a.query.mongodb.net/myVirtualDatabase?ssl=true&authSource=admin",
         "limit":200,
