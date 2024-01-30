@@ -34,8 +34,8 @@
         "alertEmails": [
             "parikshit.k@cryptogram.com"
         ],
-        "awsAccessKeyId":"AKIA5FPDYX3P7XHVSBOX",
-        "awsSecretAccessKey":"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",
+        "awsAccessKeyId":"",
+        "awsSecretAccessKey":"",
         "klickedmetermaxLimit":100,
         "klickedmeterUnblurLimit":10,
         "Userpoint":5,
