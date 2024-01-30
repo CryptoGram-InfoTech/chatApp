@@ -17,8 +17,8 @@ const {
   accountUnlocked,
   loginMail
 } = require("../../../util/email");
-const { card } = require("../models/card.model");
-const { subCard } = require("../models/subCard.model");
+// const { card } = require("../models/card.model");
+// const { subCard } = require("../models/subCard.model");
 
 const { pickUserProfileResponse, pickUserinfoForThatUser, pickRegistrationResponse, pickUserCredentials,
   pickSocialResponse, pickResForUpdateUser, pickResForUpdateUserbyAdmin,
@@ -26,7 +26,7 @@ const { pickUserProfileResponse, pickUserinfoForThatUser, pickRegistrationRespon
 
 const bcrypt = require("bcryptjs");
 const { generateAuthToken } = require("../../../util/generate.token");
-const { ForgetPasswordCode } = require("../models/forgetPasswordCode.model");
+// const { ForgetPasswordCode } = require("../models/forgetPasswordCode.model");
 const moment = require("moment");
 const { sendSmsAndEmail, sendSmsAndEmailForAdmin, sendOtpOnEmailId, resendOtpOnEmailId, sendOtpOnPhone, resendOtpOnPhone } = require('./sendEmail.business');
 const limit = process.env.limit;
@@ -60,11 +60,11 @@ let list=await User.findOneAndUpdate({purchasedPlan:{$ne:null},expiryDate:{
 
 }
 
-cron.schedule('00 00 00 * * *', function() {
-  // console.log('running a task every Secound');
-  fun();
+// cron.schedule('00 00 00 * * *', function() {
+//   // console.log('running a task every Secound');
+//   fun();
 
-});
+// });
 
 
 let sendEmailForOTP = async (email, otp, type, name) => {
@@ -140,7 +140,9 @@ let verifyOtp = async (data) => {
   // if (!data.email) {
   //   throw msg.email;
   // }
+  // let user = await User.findOne({ phone: data.phone });
   let user = await User.findOne({ phone: data.phone,deviceId:data.deviceId });
+
   if (!user) throw msg.userNotFound;
 
 //   if(user.phone=='+919971017606')
@@ -183,11 +185,19 @@ let verifyOtp = async (data) => {
 let sendOTP = async (data) => {
   console.log("hii")
   let OTP = Math.floor(100000 + Math.random() * 99999).toString();
+  console.log("hii2")
+  // let user = await User.findOne({ phone: data.phone });
   let user = await User.findOne({ phone: data.phone },{deviceId:data.deviceId});
+
+  console.log("hii3")
+
   if(user){
+    console.log("hii1")
     throw msg.duplicatePhone;
   }
   else{
+    console.log("hii2")
+
     let user = new User(data);
     response = await user.save();
     // return response;
@@ -226,7 +236,6 @@ let sendOTP = async (data) => {
   // else if (data.phone) {
 
     // let mobileOtp = await sendOtpOnPhone(data.phone, OTP, 'verify');
-
 
     let newDate = new Date();
 

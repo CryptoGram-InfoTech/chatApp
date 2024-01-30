@@ -14,11 +14,11 @@ const routes = require("./route");
 const http = require("http");
 const server = http.createServer(app)
 
-// var io = require('socket.io')(server, {
-//   cors: { origin: '*' }
-// });
-// var clientIo = require('socket.io-client');
-// var clientSocket = clientIo.connect('localhost:8000');
+var io = require('socket.io')(server, {
+  cors: { origin: '*' }
+});
+var clientIo = require('socket.io-client');
+var clientSocket = clientIo.connect('localhost:8000');
 // var realTime = require("./src/app/modules/socket/realTime");
 const port = process.env.PORT || 3000;
 const publicDirectoryPath = path.join(__dirname, '/public')
@@ -55,10 +55,6 @@ app.use('/api/users', function (req, res, next) {
   next();
 })
 
-// app.use('/api/speedChat', function (req, res, next) {
-//   req.io = clientSocket;
-//   next();
-// })
 
 app.use('/api/chats', function (req, res, next) {
   req.io = clientSocket;

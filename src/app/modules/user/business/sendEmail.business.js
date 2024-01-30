@@ -1,8 +1,8 @@
-const { VerificationCode } = require("../models/card.model");
-const { ForgetPasswordCode } = require("../models/forgetPasswordCode.model");
+// const { VerificationCode } = require("../models/card.model");
+// const { ForgetPasswordCode } = require("../models/forgetPasswordCode.model");
 const nodemailer = require("nodemailer");
 const axios = require('axios');
-const { sendSms } = require("../../../util/sms")
+// const { sendSms } = require("../../../util/sms")
 // const { sendEmail } = require("../../SendGrid/business/sendGrid.business");
 // const templates = require("../../sendgridTemplates.json");
 

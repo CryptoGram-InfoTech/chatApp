@@ -1,0 +1,49 @@
+
+{
+    "development": {
+        "PORT": 8080,
+        "MONGODB_URI": "mongodb+srv://parikshit:Imdbest1@cluster0.2e0pv1v.mongodb.net/",
+        "dummymongovalue":"mongodb://atlas-sql-6491e42ee58eb0595cf42449-h4lfj.a.query.mongodb.net/myVirtualDatabase?ssl=true&authSource=admin",
+        "limit":200,
+        "secret_token": "itsParangatModularNodeAppSecretKey",
+        "razorpay_key_secret":"",
+        "razorpay_key_id":"",
+        "secret_key": "this is for generation otp",
+        "alertEmails": [
+            "parikshit.k@cryptogram.com"
+        ],
+        "klickedmetermaxLimit":100,
+        "klickedmeterUnblurLimit":10,
+        "Userpoint":5,
+        "Sharepoint":10,
+        "defaultMessageCount":10,
+        "unblurringProfilePercentage":10,
+        "unblurringChatMessege":50,
+        "mid":"",
+        "mKey":""
+    },
+    "prod": {
+        "PORT": 8080,
+        "klickedMessageCount":10,
+        "limit":200,
+        "MONGODB_URI": "mongodb+srv://parikshit:Imdbest1@cluster0.2e0pv1v.mongodb.net/        ",
+        "razorpay_key_secret":"",
+        "razorpay_key_id":"",
+        "secret_token": "itsParangatModularNodeAppSecretKey",
+        "secret_key": "this is for generation otp",
+        "alertEmails": [
+            "parikshit.k@cryptogram.com"
+        ],
+        "awsAccessKeyId":"AKIA5FPDYX3P7XHVSBOX",
+        "awsSecretAccessKey":"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",
+        "klickedmetermaxLimit":100,
+        "klickedmeterUnblurLimit":10,
+        "Userpoint":5,
+        "Sharepoint":10,
+        "defaultMessageCount":10,
+        "unblurringProfilePercentage":10,
+        "unblurringChatMessege":50,
+        "mid":"NBAIGf59949658353213",
+        "mKey":"oW%IIVEm4clIvS#n"
+    }
+}

@@ -4,7 +4,6 @@ const multer = require('multer');
 
 let router = express.Router(),
         {
-              
                 emailVerify,
                 verifyOtp,
                 sendOTP,
